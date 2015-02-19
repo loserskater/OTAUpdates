@@ -14,7 +14,9 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 -->
-<resources>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
     <string name="preferences_name">Settings</string>
     <string name="download_folder" translatable="false">/storage/emulated/0/Download</string>
     <string name="list_summary" translatable="false">%s</string>

@@ -15,8 +15,6 @@
 	limitations under the License.
 -->
 <resources>
-    <string name="app_name">Artmod обновления</string>
-    <string name="prop_name">ro.ota.romname</string>
     <string name="cancel">Отмена</string>
     <string name="ok">OK</string>
     <string name="delete">Удалить</string>
@@ -41,7 +39,6 @@
     <string name="available_progress_counter">0MB / 0MB</string>
     <string name="available_changelog_title">Изменения</string>
     <string name="available_changelog_content">Ваши изменения будут здесь</string>
-    <string name="available_md5">MD5:</string>
     <string name="available_check_md5">Проверка MD5</string>
     <string name="available_ready_to_install">Готово к установке</string>
     <string name="available_md5_ok">MD5 успешно</string>
@@ -85,9 +82,6 @@
     <string name="menu_settings">Настройки</string>
     <string name="menu_info">Информация</string>
     <string name="preferences_name">Настройки</string>
-    <string name="download_folder">/sdcard/Download/</string>
-    <string name="list_summary">%s</string>
-    <string name="twrp_ors_cat">Скрипт для рековери</string>
     <string name="twrp_ors_title">Скрипт для рековери</string>
     <string name="twrp_ors_summary">Работает на TWRP и некоторых кастомных рековери на основе CWM</string>
     <string name="twrp_ors_information">Если включить скрипт, ОТА обновление установится автоматически</string>
@@ -99,7 +93,6 @@
     <string name="twrp_ors_wipe_cache">Вайп кеш</string>
     <string name="twrp_ors_wipe_dalvik">Вайп далвик</string>
     <string name="notifications_title">Уведомления</string>
-    <string name="background_service_title">Фоновые сервисы</string>
     <string name="background_service_summary">Автоматически проверять обновления и показывать уведомления, если доступно обновление</string>
     <string name="background_frequency">Частота проверки обновлений</string>
     <string name="background_30mins">30 мин</string>

@@ -16,8 +16,7 @@
 -->
 <resources>
     <string name="preferences_name">Ajustes</string>
-    
-    <string name="twrp_ors_cat">OpenRecoveryScript</string>
+
     <string name="twrp_ors_title">Habilitar OpenRecoveryScript</string>
     <string name="twrp_ors_summary">Funciona con TWRP y algunos recoveries CWM custom (no oficiales)</string>
     <string name="twrp_ors_information">ORS permite a esta app flashear el archivo vía recovery sin necesidad de interacción del usuario. Simplemente pulse instalar y espere a que finalice.</string>

@@ -75,6 +75,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="com.ota.update.MANIFEST_CHECK_BACKGROUND" />
                 <action android:name="com.ota.update.START_UPDATE_CHECK" />
+                <action android:name="com.ota.update.IGNORE_RELEASE" />
             </intent-filter>
         </receiver>
         

@@ -15,9 +15,6 @@
 	limitations under the License.
 -->
 <resources>
-    <!-- App Strings -->
-    <string name="app_name">Atualizações OTA</string>
-
     <!--  Generic strings -->
     <string name="cancel">Cancelar</string>
     <string name="delete">Apagar</string>
