@@ -178,7 +178,7 @@ public class Utils implements Constants{
 		} else {
 			int requestedInterval;
 			
-			if(DEBUGGING) {
+			if(DEBUG_NOTIFICATIONS) {
 				requestedInterval = 30;
 			} else {
 				requestedInterval = Preferences.getBackgroundFrequency(context);
@@ -258,11 +258,10 @@ public class Utils implements Constants{
 		String manifestVer = Integer.toString(otaVersion);
 
         boolean available;
-
         if (Preferences.getIgnoredRelease(context).matches(manifestVer)){
             available = false;
         } else {
-            available = !versionBiggerThan(currentVer, manifestVer);
+            available = DEBUG_NOTIFICATIONS ? true : !versionBiggerThan(currentVer, manifestVer);
         }
 
 		RomUpdate.setUpdateAvailable(context, available);
@@ -288,8 +287,8 @@ public class Utils implements Constants{
 		            0,
 		            PendingIntent.FLAG_UPDATE_CURRENT
 		        );
-        Intent skipIntent = new Intent();
-        skipIntent.setAction(Constants.IGNORE_RELEASE);
+        Intent skipIntent = new Intent(context, AppReceiver.class);
+        skipIntent.setAction(IGNORE_RELEASE);
         PendingIntent skipPendingIntent = PendingIntent.getBroadcast(context, 0, skipIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentTitle(context.getString(R.string.update_available))
 		.setContentText(filename)
@@ -300,7 +299,7 @@ public class Utils implements Constants{
 		.setDefaults(NotificationCompat.DEFAULT_LIGHTS)
 		.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
 		.setSound(Uri.parse(Preferences.getNotificationSound(context)))
-        .addAction(android.R.drawable.ic_menu_close_clear_cancel, context.getString(R.string.ignore_release), skipPendingIntent);
+        .addAction(R.drawable.ic_action_close, context.getString(R.string.ignore_release), skipPendingIntent);
 
 		if(Preferences.getNotificationVibrate(context)) {
 			mBuilder.setDefaults(NotificationCompat.DEFAULT_VIBRATE);
